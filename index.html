@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najib | E-commerce Platform</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500&family=Mukta&family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" type="x-icon" href="/static/images/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        
+
+        .container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            position: relative;
+            max-width: 80px;
+        }
+
+        .header ul {
+            position: relative;
+            display: flex;
+        }
+
+        .header ul li {
+            list-style: none;
+        }
+
+        .header ul li a {
+            display: inline-block;
+            margin-left: 40px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar {
+            width: 13px; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #719ad6;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #8480ce;
+        }
+
+        .secfaq{
+            margin: 50px;
+            margin-top: 120px;
+        }
+        .moon:hover{
+            cursor: pointer;
+        }
+
+    
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-800">
+    <!-- header -->
+    <section>
+    <div class="container">
+        <div class="header">
+            <p class="bg-white dark:bg-gray-800 dark:text-white">Najib E-commerce Platfrom</p>
+            <ul>
+                <li><button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Home</button></li>
+                <li>
+                    <a href="#" class="text-black dark:text-gray-100 hover:text-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Store</a>
+                </li>
+                <li>
+                    <a href="#" class="text-black dark:text-gray-100 hover:text-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/accounts/login/" class="text-black dark:text-gray-100 hover:text-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Login</a>
+                </li>
+                <li><img src="/dark&light/moon.png" class="moon" id="darkMode" width="40px" style="padding-left: 20px; padding-top: 10px;"></li>
+            </ul>
+        </div>
+        <!-- close header -->
+
+        <!-- container & button register -->
+        <div>
+            <div>
+                <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better experience</span> <br><span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">Najib E-commerce</span></h1>
+                <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">"Najib E-commerce Platform" is your go-to destination for a seamless online shopping experience. Explore a diverse range of high-quality products, from clothing to electronics, with secure payment options and excellent customer service. Shop confidently and enjoy the convenience of Najib Platform today!</p>
+            </div><br>
+            <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"> <a href="/accounts/register/">Register</a></button>
+        </div>
+    </div>
+</section>
+<section>
+    <div class=" mx-auto ">
+    <div class="text-center text-5xl font-black text-[#000]" id="titre"><span class="bg-white dark:bg-gray-800 dark:text-white">Start shopping ></span>
+    </div>
+
+    <!-- close container -->
+
+    
+        <!-- Categories buttons -->
+
+<div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+    <button type="button" class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All categories</button>
+    <button id="shoesButton" type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Shoes</button>
+    <button id="jacketsButton" type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Jackets</button>
+    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">T-shirts</button>
+    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Accesories</button>
+</div>
+
+    <!-- close Categories buttons -->
+
+
+        <!-- Slider -->
+
+<div id="gallery" class="relative w-full" data-carousel="slide">
+    
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Items -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/images/bl_glasses-removebg-preview.png" class="absolute block w-1/3 h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+        </div>
+        
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="/images/bl_cap-removebg-preview.png" class="absolute block w-1/3  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+        </div>
+        
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/images/Casque-removebg-preview.png" class="absolute block w-1/3 h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+        </div>
+        
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/images/wh_airpods-removebg-preview.png" class="absolute block w-1/3 h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+        </div>
+        
+        <div id="shoesImage" class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/images/shoesblue1.png" class="absolute block w-1/3 h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+        </div>
+        
+        <div id="jacketButton" class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/images/grayjacket-removebg-preview.png" class="absolute block w-1/4 h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+        </div>
+    </div>
+
+        <!-- Close Items -->
+
+
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-600/30 dark:bg-white-800/30 group-hover:bg-blue-600/50 dark:group-hover:bg-white-800/60 group-focus:ring-4 group-focus:ring-blue-600 dark:group-focus:ring-white-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-white-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-600/30 dark:bg-white-800/30 group-hover:bg-blue-600/50 dark:group-hover:bg-white-800/60 group-focus:ring-4 group-focus:ring-blue-600 dark:group-focus:ring-white-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-white-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+
+    <!-- Close Slider controls -->
+
+</div>
+
+</div>
+</section>
+
+<!-- Close Slider -->
+
+
+    <!-- FAQ  -->
+
+<section class="secfaq">
+        <!-- Options -->
+    <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="sm:hidden">
+            <label for="tabs" class="sr-only">Select tab</label>
+            <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option>Statistics</option>
+                <option>Services</option>
+                <option>FAQ</option>
+            </select>
+        </div>
+        <!-- Close Options -->
+
+    <!-- Content FAQ of Statistics -->
+
+        <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+            <li class="w-full">
+                <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" class="inline-block w-full p-4 rounded-ss-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Statistics</button>
+            </li>
+            <li class="w-full">
+                <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block w-full p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Services</button>
+            </li>
+            <li class="w-full">
+                <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="inline-block w-full p-4 rounded-se-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">FAQ</button>
+            </li>
+        </ul>
+        <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+                <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl font-extrabold">1,000+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Products Available</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl font-extrabold">500,000+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Happy Customers</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl font-extrabold">99.8%</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Satisfaction Rate</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl font-extrabold">24/7</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Customer Support</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl font-extrabold">10+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Years in Business</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl font-extrabold">$1B+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Sales Revenue</dd>
+                    </div>
+                </dl>
+            </div>
+
+    <!-- Close Content FAQ of Statistics -->
+
+    <!-- Content FAQ of Services -->
+
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">Our Services</h2>
+                <!-- List -->
+                <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
+                    <li class="leading-tight">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 flex-shrink-0 mr-2 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 0c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zM10 17.5c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5 7.5 3.358 7.5 7.5-3.358 7.5-7.5 7.5z"/>
+                                <path d="M10 12c-0.829 0-1.5-0.671-1.5-1.5s0.671-1.5 1.5-1.5 1.5 0.671 1.5 1.5-0.671 1.5-1.5 1.5zM10 9c-0.829 0-1.5 0.671-1.5 1.5s0.671 1.5 1.5 1.5 1.5-0.671 1.5-1.5-0.671-1.5-1.5-1.5z"/>
+                            </svg>
+                            <span>Fast Shipping Worldwide</span>
+                        </span>
+                    </li>
+                    <li class="leading-tight">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 flex-shrink-0 mr-2 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 0c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zM10 17.5c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5 7.5 3.358 7.5 7.5-3.358 7.5-7.5 7.5z"/>
+                                <path d="M10 12c-0.829 0-1.5-0.671-1.5-1.5s0.671-1.5 1.5-1.5 1.5 0.671 1.5 1.5-0.671 1.5-1.5 1.5zM10 9c-0.829 0-1.5 0.671-1.5 1.5s0.671 1.5 1.5 1.5 1.5-0.671 1.5-1.5-0.671-1.5-1.5-1.5z"/>
+                            </svg>
+                            <span>Easy Returns and Exchanges</span>
+                        </span>
+                    </li>
+                    <li class="leading-tight">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 flex-shrink-0 mr-2 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 0c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zM10 17.5c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5 7.5 3.358 7.5 7.5-3.358 7.5-7.5 7.5z"/>
+                                <path d="M10 12c-0.829 0-1.5-0.671-1.5-1.5s0.671-1.5 1.5-1.5 1.5 0.671 1.5 1.5-0.671 1.5-1.5 1.5zM10 9c-0.829 0-1.5 0.671-1.5 1.5s0.671 1.5 1.5 1.5 1.5-0.671 1.5-1.5-0.671-1.5-1.5-1.5z"/>
+                            </svg>
+                            <span>Secure Online Payments</span>
+                        </span>
+                    </li>
+                    <li class="leading-tight">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 flex-shrink-0 mr-2 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 0c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zM10 17.5c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5 7.5 3.358 7.5 7.5-3.358 7.5-7.5 7.5z"/>
+                                <path d="M10 12c-0.829 0-1.5-0.671-1.5-1.5s0.671-1.5 1.5-1.5 1.5 0.671 1.5 1.5-0.671 1.5-1.5 1.5zM10 9c-0.829 0-1.5 0.671-1.5 1.5s0.671 1.5 1.5 1.5 1.5-0.671 1.5-1.5-0.671-1.5-1.5-1.5z"/>
+                            </svg>
+                            <span>Quality Guarantee</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+    <!-- Close Content FAQ of Services -->
+
+    <!-- Content FAQ of FAQ -->
+
+            <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-800 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                    <h2 id="accordion-flush-heading-1">
+                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                        <span>What products do you offer?</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                        <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">We offer a wide range of products including clothing, electronics, accessories, home decor, and much more. Browse through our website to explore our complete collection.</p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-flush-heading-2">
+                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                        <span>What are your shipping options?</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                        <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">We offer various shipping options including standard shipping, express shipping, and international shipping. You can choose the option that best suits your needs during checkout.</p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-flush-heading-3">
+                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                        <span>How can I track my order?</span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                        <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Once your order has been shipped, you will receive a tracking number via email. You can use this tracking number to track the status of your order on our website or through the shipping carrier's website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Close Content FAQ of FAQ -->
+</section>
+
+
+
+
+<section>
+    
+     <div class="container mx-auto p-16"> 
+    <div class="rounded-lg shadow-lg  flex flex-row">
+        <div
+          class="lg:w-3/5 w-full bg-gradient-to-r from-black to-purple-900 lg:from-black lg:via-purple-900 lg:to-transparent rounded-lg"
+        >
+          <div class="lg:w-1/2 p-8">
+            <h3 class="text-2xl font-extrabold mb-4 text-white">
+              Subscribe To Get Our Offers First
+            </h3>
+            <p class="mb-4 leading-relaxed text-white">
+              Want to hear from us when we have new offers ? Subscribe for our
+              newsletter and we'll email you every time we have new sale offers
+            </p>
+            <div>
+              <input
+                type="email"
+                placeholder="Enter email address"
+                class="bg-gray-600 text-gray-200 placeholder-gray-400 px-4 py-3 w-full rounded-lg focus:outline-none mb-4" id="email"
+              />
+              <button type="button" class="bg-blue-600 py-3 rounded-lg w-full dark:text-gray-100" onclick="Send()">
+                Subscribe 29.99$
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-2/5 w-full  ">
+          <!-- <img src="/" class="h-126" /> -->
+          <h2 class="pt-9 dark:text-gray-100">✔ Exclusive Discounts</h2><br>
+          <h2 class="dark:text-gray-100">✔ Early Access to Sales</h2><br>
+          <h2 class="dark:text-gray-100">✔ Free Shipping</h2><br>
+          <h2 class="dark:text-gray-100">✔ Loyalty Points/Rewards</h2><br>
+          <h2 class="dark:text-gray-100">✔ Personalized Recommendations</h2><br>
+          <h2 class="dark:text-gray-100">✔ Priority Customer Support</h2><br>
+          <h2 class="dark:text-gray-100">✔ Birthday Rewards</h2>
+        </div>
+      </div>
+     </div>
+
+    
+    <h2 id="message"></h2>
+    <br>
+<!-- Contact Us Button -->
+<div class="text-center">
+    <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-contact" data-drawer-show="drawer-contact" aria-controls="drawer-contact">
+    Contact Us
+    </button>
+ </div>
+ <!-- Close Contact Us button -->
+
+
+ <!-- Form -->
+ <div id="drawer-contact" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-contact-label">
+    <h5 id="drawer-label" class="inline-flex items-center mb-6 text-base font-semibold text-gray-500 uppercase dark:text-gray-400"><svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+     <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+     <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+   </svg>Contact us</h5>
+    <button type="button" data-drawer-hide="drawer-contact" aria-controls="drawer-contact" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+       <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+       </svg>
+       <span class="sr-only">Close menu</span>
+    </button>
+    <form class="mb-6">
+       <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+          <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@gmail.com" required />
+       </div>
+       <div class="mb-6">
+          <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subject</label>
+          <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Let us know how we can help you" required />
+       </div>
+       <div class="mb-6">
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
+          <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
+       </div>
+       <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 block">Send message</button>
+    </form>
+    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+       <a href="#" class="hover:underline">najib@gmail.com</a>
+    </p>
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+       <a href="#" class="hover:underline">+212 01 97 85 47</a>
+    </p>
+ </div>
+ <!-- Close Form -->
+
+</section>
+
+<br>
+
+
+
+
+
+
+
+
+<section>
+    <!-- Footer -->
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Najib E-commerce ™</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="index.html" class="hover:underline me-4 md:me-6">Home</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">About</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Store</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline">Contact</a>
+        </li>
+    </ul>
+    </div>
+</footer>
+    <!-- Close Footer -->
+</section>
+
+
+<!-- Script of the buttons above the Slider -->
+<script>
+    const shoesButton = document.getElementById("shoesButton");
+    const jacketsButton = document.getElementById("jacketsButton");
+    const carouselItems = document.querySelectorAll("[data-carousel-item]");
+
+    shoesButton.addEventListener("click", function() {
+        carouselItems.forEach(item => {
+            const img = item.querySelector("img");
+            if (img.getAttribute("src") === "/images/shoesblue1.png") {
+                item.classList.remove("hidden");
+                item.setAttribute("data-carousel-item", "active");
+            } else {
+                item.classList.add("hidden");
+                item.setAttribute("data-carousel-item", "");
+            }
+        });
+    });
+
+    jacketsButton.addEventListener("click", function() {
+        carouselItems.forEach(item => {
+            const img = item.querySelector("img");
+            if (img.getAttribute("src") === "/images/grayjacket.jpg") {
+                item.classList.remove("hidden");
+                item.setAttribute("data-carousel-item", "active");
+            } else {
+                item.classList.add("hidden");
+                item.setAttribute("data-carousel-item", "");
+            }
+        });
+    });
+</script>
+
+<!-- Script of Slider -->
+<script>
+const navLinks = document.querySelector(".nav-links");
+function onToggleMenu(e) {
+  e.name = e.name === "menu" ? "close" : "menu";
+  navLinks.classList.toggle("top-[12%]");
+}
+</script>
+
+
+<!-- Script of dark & light mode -->
+<script>
+    const darkModeImg = document.querySelector('#darkMode');
+
+    darkModeImg.addEventListener("click", () => {
+        document.documentElement.classList.toggle('dark');
+    })
+</script>
+
+<!-- Toggle between moon & sun img -->
+<script>
+    darkModeImg.onclick = function(){
+    document.body.classList.toggle("dark");
+    if(document.body.classList.contains("dark")){
+        darkModeImg.src = "/dark&light/sun.png";
+    }else{
+        darkModeImg.src = "/dark&light/moon.png";
+    }
+}
+</script>
+
+<script>
+    function send() {
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message");
+    var isValid = /\S+@\S+\.\S+/.test(email);
+    if (!isValid) {
+      message.textContent = "Enter a valid email address";
+    } else {
+      message.textContent = "Successfully Subscribed!";
+    }
+    document.getElementById("email").value = "";
+  }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>
