@@ -1,0 +1,239 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+<!-- ========================= SECTION MAIN ========================= -->
+<section class="section-intro padding-y-sm">
+<div class="container">
+
+<div class="intro-banner-wrap">
+	<img src="{% static 'images/banners/cover1.png' %}" class="img-fluid rounded">
+</div>
+
+</div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm">
+<div class="container">
+
+<header class="section-heading">
+	<a href="#" class="btn btn-outline-primary float-right" id="seeall">See all</a>
+	<h3 class="title section-title">Popular products</h3>
+</header><!-- sect-heading -->
+
+	
+<div class="row">
+	
+	
+	
+	{% for product in products %}
+	<div class="divProd col-md-3">
+		<div class="card card-product-grid">
+			<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
+			<figcaption class="info-wrap">
+				<a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
+				<div class="price mt-1">${{ product.price }}</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	{% endfor %}
+</div> <!-- row.// -->
+
+</div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+
+
+<!-- ========================= FOOTER ========================= -->
+
+<!-- ========================= FOOTER END // ========================= -->
+
+<script>
+    // Function to update currency symbol
+    function updateCurrencySymbol() {
+        var select = document.getElementById('currencySelect');
+        var selectedCurrency = select.value;
+        var currencySymbol = '';
+        var currencyMultiplier = 1;
+
+        if (selectedCurrency === 'USD') {
+            currencySymbol = '$';
+        } else if (selectedCurrency === 'EUR') {
+            currencySymbol = '€';
+        } else if (selectedCurrency === 'MAD') {
+            currencySymbol = 'MAD ';
+            currencyMultiplier = 10/3; // Set multiplier for MAD currency
+        }
+
+        var priceElements = document.querySelectorAll('.price');
+
+        priceElements.forEach(function(element) {
+            var originalPrice = parseFloat(element.dataset.originalPrice);
+            var updatedPrice = originalPrice * currencyMultiplier;
+
+            // Update the displayed price
+            element.textContent = currencySymbol + updatedPrice.toFixed(2);
+        });
+
+        document.cookie = "selectedCurrency=" + selectedCurrency + "; path=/";
+    }
+
+    function retrieveSelectedCurrency() {
+        var cookies = document.cookie.split(';');
+        var selectedCurrency = null;
+
+        cookies.forEach(function(cookie) {
+            var parts = cookie.trim().split('=');
+            if (parts[0] === 'selectedCurrency') {
+                selectedCurrency = parts[1];
+            }
+        });
+        if (selectedCurrency) {
+            document.getElementById('currencySelect').value = selectedCurrency;
+            updateCurrencySymbol(); 
+        }
+    }
+
+    document.getElementById('currencySelect').addEventListener('change', updateCurrencySymbol);
+
+    // Store original prices in data-original-price attribute
+    var priceElements = document.querySelectorAll('.price');
+    priceElements.forEach(function(element) {
+        element.dataset.originalPrice = parseFloat(element.textContent.trim().substring(1));
+    });
+
+    retrieveSelectedCurrency();
+</script>
+
+
+<script>
+    function updateTitle() {
+        var select = document.getElementById('languageSelect');
+        var selectedLanguage = select.value;
+
+        var titleElement = document.querySelector('.title.section-title');
+        var translation = data[selectedLanguage].title;
+
+        titleElement.textContent = translation;
+        localStorage.setItem('selectedLanguage', selectedLanguage);
+    }
+
+    document.getElementById('languageSelect').addEventListener('change', updateTitle);
+    function retrieveSelectedLanguage() {
+        var selectedLanguage = localStorage.getItem('selectedLanguage');
+
+        if (selectedLanguage) {
+            document.getElementById('languageSelect').value = selectedLanguage;
+            updateTitle();
+        }
+    }
+
+    retrieveSelectedLanguage();
+</script>
+
+
+<script>
+    let data = {
+        english:{
+            title : "Popular products",
+            seeall : "See All",
+            stoore : "Store",
+            allcategory : "All Categorys",
+            emaill : " Email",
+            Callus : " Call us",
+            welcom : "Welcome",
+            dash : "Dashboard"
+        },
+        frensh:{
+            title : "Produits populaires",
+            seeall : "Voir Tout",
+            stoore : "Marché",
+            allcategory : "Toutes les Catégories",
+            emaill : " Gmail",
+            Callus : " Contactez nous",
+            welcom : "Bienvenue",
+            dash : "Tableau de bord"
+        },
+        arabic:{
+            title : "المنتوجات المعروضة",
+            seeall : "رؤية الكل",
+            stoore : "المتجر",
+            allcategory : "جميع الفئات",
+            emaill : " ايميل",
+            Callus : " تواصل معنا",
+            welcom : " مرحبا",
+            dash : " لوحة القيادة"
+        }
+    }
+
+    // Function to update title based on language selection
+    function updateTitle() {
+        var select = document.getElementById('languageSelect');
+        var selectedLanguage = select.value;
+
+        var titleElement = document.querySelector('.title.section-title');
+        var translation = data[selectedLanguage].title;
+
+        var seeAllElement = document.getElementById('seeall');
+        var seeAllTranslation = data[selectedLanguage].seeall;
+
+        var stoore = document.getElementById('stoore');
+        var stooreTranslation = data[selectedLanguage].stoore;
+
+        var allcategory = document.getElementById('allcategory');
+        var allcategoryTranslation = data[selectedLanguage].allcategory;
+
+        var emaill = document.getElementById('emaill');
+        var emaillTranslation = data[selectedLanguage].emaill;
+
+        var Callus = document.getElementById('Callus');
+        var CallusTranslation = data[selectedLanguage].Callus;
+
+        var welcom = document.getElementById('welcom');
+        var welcomTranslation = data[selectedLanguage].welcom;
+
+        var dash = document.getElementById('dash');
+        var dashTranslation = data[selectedLanguage].dash;
+
+        titleElement.textContent = translation;
+        seeAllElement.textContent = seeAllTranslation; 
+        stoore.textContent = stooreTranslation;
+        allcategory.textContent = allcategoryTranslation;
+        emaill.textContent = emaillTranslation;
+        Callus.textContent = CallusTranslation;
+        welcom.textContent = welcomTranslation;
+        dash.textContent = dashTranslation;
+
+
+        // Update image source based on language
+        var imageElement = document.querySelector('.intro-banner-wrap img');
+        if (selectedLanguage === 'english') {
+            imageElement.src = "{% static 'images/banners/cover1.png' %}";
+        } else if (selectedLanguage === 'frensh') {
+            imageElement.src = "{% static 'images/banners/coverFrancais.png' %}";
+        } else if (selectedLanguage === 'arabic') {
+            imageElement.src = "{% static 'images/banners/coverArabic.png' %}";
+        }
+
+
+    }
+
+    document.getElementById('languageSelect').addEventListener('change', updateTitle);
+    updateTitle();
+</script>
+
+
+
+
+</body>
+</html>
+
+{% endblock %}

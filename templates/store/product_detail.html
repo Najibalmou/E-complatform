@@ -1,0 +1,298 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section-content padding-y bg">
+<div class="container">
+
+<!-- ============================ COMPONENT 1 ================================= -->
+<div class="card">
+	<div class="row no-gutters">
+		<aside class="col-md-6">
+<article class="gallery-wrap"> 
+	<div class="img-big-wrap">
+	   <a href="#"><img id="product-image" src="{{ single_product.images.url }}" class="zoom-img"></a>
+	</div> <!-- img-big-wrap.// -->
+	
+</article> <!-- gallery-wrap .end// -->
+		</aside>
+		<main class="col-md-6 border-left">
+<article class="content-body">
+
+<h2 class="title" id="title">{{ single_product.product_name }}</h2>
+
+<div class="mb-3"> 
+	<var class="price h4" id="desc">${{ single_product.price }}</var> 
+</div> 
+
+<p id="product-description">{{ single_product.description }}</p>
+
+
+<hr>
+	<div class="row">
+		<div class="item-option-select">
+			<h6 id="choosecolor">Choose Color</h6>
+			<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+			  <label class="btn btn-light" onclick="changeImage('White')" id="white">
+			    <input type="radio" name="radio_color"> White
+			  </label>
+			  <label class="btn btn-light" onclick="changeImage('Gray')" id="gray">
+			    <input type="radio" name="radio_color" > Gray
+			  </label>
+			  <label class="btn btn-light active" onclick="changeImage('Blue')" id="blue">
+			    <input type="radio" name="radio_color checked"> Blue 
+			  </label>
+			  <label class="btn btn-light" onclick="changeImage('Black')" id="black">
+			    <input type="radio" name="radio_color"> Black
+			  </label>
+			</div> 
+		</div>
+	</div> <!-- row.// -->
+	<div class="row">
+		<div class="item-option-select">
+			<h6 id="choosesize">Select Size</h6>
+			<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+			  <label class="btn btn-light">
+			    <input type="radio" name="radio_color"> S
+			  </label>
+			  <label class="btn btn-light active">
+			    <input type="radio" name="radio_color" checked> M
+			  </label>
+			  <label class="btn btn-light">
+			    <input type="radio" name="radio_color"> L
+			  </label>
+			  <label class="btn btn-light">
+			    <input type="radio" name="radio_color"> XL
+			  </label>
+			</div> 
+		</div>
+	</div> <!-- row.// -->
+	<hr>
+	{% if single_product.stock <= 0 %}
+	  <h5 class="text-danger">Out of stock</h5>
+	{% else %}
+		{% if in_cart %}
+		<a href="#" class="btn  btn-success"> <span class="text">Added to cart</span> <i class="fas fa-check"></i>  </a>
+		<a href="{% url 'cart' %}" class="btn  btn-outline-primary"> <span class="text">View Cart</span> <i class="fas fa-eye"></i>  </a>
+		{% else %}
+			<a href="{% url 'add_cart' single_product.id %}" class="btn  btn-primary"> <span class="text" id="addtocart">Add to cart</span> <i class="fas fa-shopping-cart"></i>  </a>
+		{% endif %}
+	{% endif %}
+</article> <!-- product-info-aside .// -->
+		</main> <!-- col.// -->
+	</div> <!-- row.// -->
+</div> <!-- card.// -->
+<!-- ============================ COMPONENT 1 END .// ================================= -->
+
+<br>
+
+<div class="row">
+			<div class="col-md-9">
+
+	<header class="section-heading">
+		<h3 id="reviews">Customers Reviews </h3>  
+		
+	</header>
+
+	<article class="box mb-3">
+		<div class="icontext w-100">
+			<img src="{% static 'images/avatars/man1.jpg' %}" class="img-xs icon rounded-circle">
+			<div class="text">
+				<span class="date text-muted float-md-right">12.03.2024 </span>  
+				<h6 class="mb-1" id="imad">Imad Montasir </h6>
+				
+			</div>
+		</div> <!-- icontext.// -->
+		<div class="mt-3" id="paragraph">
+			<p>
+				"I just purchased a jacket from Najib E-commerce, and I'm overjoyed with my experience! Navigating the website was a breeze, the checkout process was seamless, and my order arrived in a flash. The jacket's quality surpassed my expectations, and it's exactly what I wanted. Without a doubt, I'll be coming back to Najib E-commerce for all my future shopping!"
+			</p>	
+		</div>
+	</article>
+
+	<article class="box mb-3">
+		<div class="icontext w-100">
+			<img src="{% static 'images/avatars/women.jpg' %}" class="img-xs icon rounded-circle">
+			<div class="text">
+				<span class="date text-muted float-md-right">01.03.2024 </span>  
+				<h6 class="mb-1" id="wiam">Wiam Allami </h6>
+				
+			</div>
+		</div> <!-- icontext.// -->
+		<div class="mt-3" id="paragraph2">
+			<p>
+				"I recently purchased shoes from Najib E-commerce and I'm delighted with my experience! The website was user-friendly, checkout was smooth, and my order arrived promptly. The shoes are excellent quality and exactly what I was looking for. I'll definitely be returning to Najib E-commerce for my future shopping needs!"
+			</p>	
+		</div>
+	</article>
+
+	
+
+	</div> <!-- col.// -->
+</div> <!-- row.// -->
+
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+<script> 
+	var Title = document.getElementById("title").innerText; 
+	
+	if (Title === "Blue Jeans") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/jeans.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/jeans2.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/jeanswhite.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/grayjeans.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Blue-shirt") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/shirt.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/blueshirt.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/shirt4.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/shirt.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Shirt Jacket") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/kbiya1.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/kbiya2.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/kbiya3.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/kbiya4.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "New Balance") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/blueshoes.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/shoesblack.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/whiteshoes.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/shoesgray.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Jackets") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/bluejacket.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/bl jacket.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/whitejacket.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/grayjacket.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Tshirts") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/bluesTT.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/blacktshirt.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/whitettshirt.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/gray tshirt.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Cap") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/bluecapp.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/bl cap.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/whitecap.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/graycap.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Watch") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/bluewatch.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/watch55.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/whitewatch.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/watch2.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Glasses") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/blue galees.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/bl glasses.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/white glasses.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/gray glassses.jpg' %}";
+			}
+		  }
+	}
+
+	if (Title === "Packs") {
+		function changeImage(color) {
+			var image = document.getElementById("product-image");
+			if (color === "Blue") {
+				  image.src = "{% static 'images/items/pack4.jpg' %}"; 
+			} else if (color === "Black") {
+				  image.src = "{% static 'images/items/pack1.jpg' %}"; 
+			} else if (color === "White") {
+				  image.src = "{% static 'images/items/pack3.jpg' %}";
+			} else if (color === "Gray") {
+				  image.src = "{% static 'images/items/pack2.jpg' %}";
+			}
+		  }
+	}
+	</script>
+	
+	
+	
+	
+	
+
+{% endblock %}

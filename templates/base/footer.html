@@ -1,0 +1,302 @@
+{% load static %}
+<footer class="section-footer border-top">
+	<div class="container">
+		<section class="footer-bottom border-top row">
+			<div class="col-md-2">
+				<p class="text-muted"> &copy 2024 Najib Platform</p>
+			</div>
+			<div class="col-md-8 text-md-center">
+				<span  class="px-2">najib@gmail.com</span>
+				<span  class="px-2">+212 01978547</span>
+				<span  class="px-2">Casablanca / Ain Harrouda</span>
+			</div>
+			<div class="col-md-2 text-md-right text-muted">
+				<i class="fab fa-lg fa-cc-visa"></i>
+				<i class="fab fa-lg fa-cc-paypal"></i>
+				<i class="fab fa-lg fa-cc-mastercard"></i>
+			</div>
+		</section>
+	</div><!-- //container -->
+
+	<script>
+        function updateParagraph() {
+            var languageSelect = document.getElementById("languageSelect");
+            var selectedLanguage = languageSelect.value;
+            var paragraph = document.getElementById("paragraph");
+			var paragraph2 = document.getElementById("paragraph2");
+			var wiam = document.getElementById("wiam");
+			var imad = document.getElementById("imad");
+			var reviews = document.getElementById("reviews");
+			var title = document.getElementById("title");
+			var descriptionParagraph = document.getElementById("product-description");
+			var addtocart = document.getElementById("addtocart");
+			var dash = document.getElementById('dash');
+			var welcom = document.getElementById('welcom');
+			var emaill = document.getElementById('emaill');
+			var Callus = document.getElementById('Callus');
+			var stoore = document.getElementById('stoore');
+			var allcategory = document.getElementById('allcategory');
+			var choosecolor = document.getElementById('choosecolor');
+			var choosesize = document.getElementById('choosesize');
+
+            switch (selectedLanguage) {
+                case "english":
+				if(title.textContent == "Blue Jeans"){ 
+            	descriptionParagraph.textContent = "Introducing our classic blue jeans: timeless style, everyday comfort. Crafted from premium denim for a sleek fit that goes with everything. Your new go-to staple.",
+        		title.textContent = "Blue Jeans"
+			}
+			else if (title.textContent == "Blue-shirt"){
+					descriptionParagraph.textContent = "Introducing our classic blue T-shirt: effortless style, everyday comfort. Crafted from soft, breathable fabric for a perfect fit. Your new wardrobe essential.",
+					title.textContent = "Blue-shirt"
+				}
+				else if (title.textContent == "Shirt Jacket"){
+					descriptionParagraph.textContent = "Introducing our essential white shirt Jacket: timeless style, everyday comfort. Crafted from premium cotton for a soft, breathable feel. The perfect blank canvas for any outfit.",
+					title.textContent = "Shirt Jacket"
+				}
+				else if (title.textContent == "New Balance"){
+					descriptionParagraph.textContent = "Introducing our sleek ZN shoes: timeless style, everyday comfort. Crafted with premium materials for durability and a classic look. Elevate any outfit with these versatile essentials.",
+					title.textContent = "New Balance"
+				}
+				else if (title.textContent == "Jackets"){
+					descriptionParagraph.textContent = "Introducing our sleek jacket: timeless style, everyday comfort. Crafted with premium materials for durability and a modern look. Elevate any outfit with this versatile essential.",
+					title.textContent = "Jackets"
+				}
+				if(title.textContent == "Tshirts"){
+					descriptionParagraph.textContent = "350GSM Heavy Weight Fashion Men's Hoodies New Autumn Winter Casual Thick Cotton Men's Top Solid Color Hoodies Sweatshirt Male",
+					title.textContent = "Tshirts"
+				}
+				if(title.textContent == "Packs"){
+					descriptionParagraph.textContent = "A pack wardrobe essential, featuring a solid black color and short sleeves. It's versatile, pairing well with jeans for a casual look or a blazer for a more dressed-up style.",
+					title.textContent = "Packs"
+				}
+				if(title.textContent == "Brown Shoes"){
+					descriptionParagraph.textContent = "Brown shoes: versatile and timeless. Neutral tone pairs easily with various outfits. Ideal for both casual and formal occasions.",
+					title.textContent = "Brown Shoes"
+				}
+				if(title.textContent == "Black Turtleneck"){
+					descriptionParagraph.textContent = "A Black turtleneck: sleek, timeless, long-sleeved. Ideal for a refined yet cozy style, whether paired with jeans for a relaxed outing or layered under a jacket for a more sophisticated look.",
+					title.textContent = "Black Turtleneck"
+				}
+				if(title.textContent == "Cap"){
+					descriptionParagraph.textContent = "A Cap: timeless, versatile, and effortlessly cool. It adds a touch of style to any outfit, whether paired with casual jeans or a more formal ensemble.",
+					title.textContent = "Cap"
+				}
+				if(title.textContent == "Wool Overshirt"){
+					descriptionParagraph.textContent = "A wool overshirt: warm, stylish, versatile. Great for layering over a T-shirt or sweater. Perfect for adding extra warmth and style to your outfit.",
+					title.textContent = "Wool Overshirt"
+				}
+				if(title.textContent == "SweetPants"){
+					descriptionParagraph.textContent = "Sweatpants: comfy, relaxed bottoms often in gray, black or other colors. Ideal for lounging or casual outings, pairs well with T-shirts or hoodies for a laid-back style.",
+					title.textContent = "SweetPants"
+				}
+				if(title.textContent == "Glasses"){
+					descriptionParagraph.textContent = "Glasses: Functional, stylish eyewear. Enhances vision while adding a touch of personality to any outfit.",
+					title.textContent = "Glasses"
+				}
+				if(title.textContent == "Watch"){
+					descriptionParagraph.textContent = "A watch: timeless accessory, functional and stylish. Adds sophistication to any outfit, whether casual or formal.",
+					title.textContent = "Watch"
+				}
+				if(title.textContent == "AriPods"){
+					descriptionParagraph.textContent = "AirPods: sleek, wireless earbuds by Apple. Compact design, seamless connectivity. Ideal for on-the-go music, calls, and voice commands.",
+					title.textContent = "AriPods"
+				}
+				if(title.textContent == "Casque"){
+					descriptionParagraph.textContent = "A casque: sleek, protective headgear. Designed for safety during activities like cycling or skating. Available in various styles and colors.",
+					title.textContent = "Casque"
+				}
+                    paragraph.textContent = "I just purchased a jacket from Najib E-commerce, and I'm overjoyed with my experience! Navigating the website was a breeze, the checkout process was seamless, and my order arrived in a flash. The jacket's quality surpassed my expectations, and it's exactly what I wanted. Without a doubt, I'll be coming back to Najib E-commerce for all my future shopping!";
+					paragraph2.textContent = "I recently purchased shoes from Najib E-commerce and I'm delighted with my experience! The website was user-friendly, checkout was smooth, and my order arrived promptly. The shoes are excellent quality and exactly what I was looking for. I'll definitely be returning to Najib E-commerce for my future shopping needs!";
+					wiam.textContent = "Wiam Allami";
+					imad.textContent = "Imad Montasir";
+					reviews.textContent = "Customers Reviews";
+					addtocart.textContent = "Add to cart";
+					dash.textContent = "Dashboard";
+					welcom.textContent = "Welcome";
+					emaill.textContent = " Email";
+					Callus.textContent = " Call us";
+					stoore.textContent = "Store";
+					allcategory.textContent = "All Categorys";
+					choosecolor.textContent = "Choose Color";
+					choosesize.textContent = "Select Size";
+					break;
+                case "frensh":
+				if(title.textContent == "Blue Jeans"){
+					descriptionParagraph.textContent = "Présentation de notre jean bleu classique : style intemporel, confort au quotidien. Fabriqué à partir de denim de qualité supérieure pour une coupe élégante qui va avec tout. Votre nouvel incontournable.",
+					title.textContent = "Blue Jeans"
+				}
+				else if (title.textContent == "Blue-shirt"){
+					descriptionParagraph.textContent = "Présentation de notre T-shirt bleu classique : style sans effort, confort au quotidien. Fabriqué à partir de tissu doux et respirant pour un ajustement parfait. Votre nouvel indispensable dans votre garde-robe.",
+					title.textContent = "Blue-shirt"
+				}
+				else if (title.textContent == "Shirt Jacket"){
+					descriptionParagraph.textContent = "Présentation de notre veste chemise blanche indispensable : style intemporel, confort au quotidien. Fabriqué à partir de coton de qualité supérieure pour une sensation douce et respirante. La toile vierge parfaite pour n’importe quelle tenue.",
+					title.textContent = "Shirt Jacket"
+				}
+				else if (title.textContent == "New Balance"){
+					descriptionParagraph.textContent = "Présentation de nos élégantes chaussures ZN : style intemporel, confort au quotidien. Fabriqué avec des matériaux haut de gamme pour une durabilité et un look classique. Rehaussez n’importe quelle tenue avec ces essentiels polyvalents.",
+					title.textContent = "New Balance"
+				}
+				else if (title.textContent == "Jackets"){
+					descriptionParagraph.textContent = "Présentation de notre veste élégante : style intemporel, confort au quotidien. Fabriqué avec des matériaux haut de gamme pour une durabilité et un look moderne. Rehaussez n’importe quelle tenue avec cet essentiel polyvalent.",
+					title.textContent = "Jackets"
+				}
+				if(title.textContent == "Tshirts"){
+					descriptionParagraph.textContent = "350GSM poids lourd mode hommes sweats à capuche nouveau automne hiver décontracté épais coton hommes haut couleur unie sweat à capuche mâle",
+					title.textContent = "Tshirts"
+				}
+				if(title.textContent == "Packs"){
+					descriptionParagraph.textContent = "Un incontournable de la garde-robe, avec une couleur noire unie et des manches courtes. Il est polyvalent et se marie bien avec un jean pour un look décontracté ou un blazer pour un style plus habillé.",
+					title.textContent = "Packs"
+				}
+				if(title.textContent == "Brown Shoes"){
+					descriptionParagraph.textContent = "Chaussures marron : polyvalentes et intemporelles. Le ton neutre se marie facilement avec diverses tenues. Idéal pour les occasions décontractées et formelles.",
+					title.textContent = "Brown Shoes"
+				}
+				if(title.textContent == "Black Turtleneck"){
+					descriptionParagraph.textContent = "Un col roulé Noir : épuré, intemporel, à manches longues. Idéal pour un style raffiné mais douillet, qu'il soit associé à un jean pour une sortie décontractée ou sous une veste pour un look plus sophistiqué.",
+					title.textContent = "Black Turtleneck"
+				}
+				if(title.textContent == "Cap"){
+					descriptionParagraph.textContent = "Une casquette : intemporelle, polyvalente et naturellement cool. Il ajoute une touche de style à n'importe quelle tenue, qu'elle soit associée à un jean décontracté ou à un ensemble plus formel.",
+					title.textContent = "Cap"
+				}
+				if(title.textContent == "Wool Overshirt"){
+					descriptionParagraph.textContent = "Une surchemise en laine : chaude, stylée, polyvalente. Idéal à superposer sur un T-shirt ou un pull. Parfait pour ajouter plus de chaleur et de style à votre tenue.",
+					title.textContent = "Wool Overshirt"
+				}
+				if(title.textContent == "SweetPants"){
+					descriptionParagraph.textContent = "Pantalons de survêtement : bas confortables et décontractés, souvent de couleur grise, noire ou autre. Idéal pour se prélasser ou les sorties décontractées, se marie bien avec des t-shirts ou des sweats à capuche pour un style décontracté.",
+					title.textContent = "SweetPants"
+				}
+				if(title.textContent == "Glasses"){
+					descriptionParagraph.textContent = "Lunettes : lunettes fonctionnelles et élégantes. Améliore la vision tout en ajoutant une touche de personnalité à n'importe quelle tenue.",
+					title.textContent = "Glasses"
+				}
+				if(title.textContent == "Watch"){
+					descriptionParagraph.textContent = "Une montre : accessoire intemporel, fonctionnel et élégant. Ajoute de la sophistication à n'importe quelle tenue, que ce soit décontractée ou formelle.",
+					title.textContent = "Watch"
+				}
+				if(title.textContent == "AriPods"){
+					descriptionParagraph.textContent = "AirPods : des écouteurs élégants et sans fil conçus par Apple. Un design compact, une connectivité sans faille. Idéal pour écouter de la musique en déplacement, passer des appels et utiliser des commandes vocales.",
+					title.textContent = "AriPods"
+				}
+				if(title.textContent == "Casque"){
+					descriptionParagraph.textContent = "Un casque : un équipement de protection élégant conçu pour assurer la sécurité lors d'activités telles que le cyclisme ou le patinage. Disponible dans divers styles et couleurs.",
+					title.textContent = "Casque"
+				}
+                    paragraph.textContent = "Je viens d'acheter une veste chez Najib E-commerce et je suis ravie de mon expérience ! La navigation sur le site Web a été un jeu d'enfant, le processus de paiement s'est déroulé sans problème et ma commande est arrivée en un éclair. La qualité de la veste a dépassé mes attentes et c'est exactement ce que je voulais. Sans aucun doute, je reviendrai sur Najib E-commerce pour tous mes futurs achats !";  
+					paragraph2.textContent = "J'ai récemment acheté des chaussures chez Najib E-commerce et je suis ravie de mon expérience ! Le site Web était convivial, le paiement s’est déroulé sans problème et ma commande est arrivée rapidement. Les chaussures sont d'excellente qualité et correspondent exactement à ce que je recherchais. Je reviendrai certainement chez Najib E-commerce pour mes futurs besoins d'achats !";  
+					wiam.textContent = "Wiam Allami";
+					imad.textContent = "Imad Montasir";
+					reviews.textContent = "Commentaires des clients";
+					addtocart.textContent = "Ajouter au panier";
+					dash.textContent = "Tableau de bord";
+					welcom.textContent = "Bienvenue";
+					emaill.textContent = " Gmail";
+					Callus.textContent = " Contactez nous";
+					stoore.textContent = "Marché";
+					allcategory.textContent = "Toutes les Catégories";
+					choosecolor.textContent = "Choisie la couleur";
+					choosesize.textContent = "Choisie la taille";
+					break;
+                case "arabic":
+				if(title.textContent == "Blue Jeans"){
+					descriptionParagraph.textContent = "نقدم لكم الجينز الأزرق الكلاسيكي الخاص بنا: طراز خالد، راحة يومية. مصنوع من قماش الدنيم الفاخر لملاءمة أنيقة تتماشى مع كل شيء. العنصر الأساسي الجديد لديك.",
+					title.textContent = "Blue Jeans"
+				}
+				else if (title.textContent == "Blue-shirt"){
+					descriptionParagraph.textContent = "نقدم لكم التيشيرت الأزرق الكلاسيكي الخاص بنا: أسلوب سهل، راحة يومية. مصنوع من قماش ناعم وجيد التهوية لملاءمة مثالية. خزانة ملابسك الجديدة ضرورية.",
+					title.textContent = "Blue-shirt"
+				}
+				else if (title.textContent == "Shirt Jacket"){
+					descriptionParagraph.textContent = "نقدم لكم سترة القميص الأبيض الأساسية لدينا: طراز خالد، راحة يومية. مصنوع من القطن الفاخر لملمس ناعم وجيد التهوية. القماش الفارغ المثالي لأي جماعة.",
+					title.textContent = "Shirt Jacket"
+				}
+				else if (title.textContent == "New Balance"){
+					descriptionParagraph.textContent = "نقدم لكم أحذية ZN الأنيقة: طراز خالد، راحة يومية. مصنوعة من مواد فاخرة من أجل المتانة والمظهر الكلاسيكي. ارتقي بأي زي مع هذه الأساسيات المتنوعة.",
+					title.textContent = "New Balance"
+				}
+				else if (title.textContent == "Jackets"){
+					descriptionParagraph.textContent = "نقدم لكم سترتنا الأنيقة: طراز خالد، راحة يومية. مصنوعة من مواد فاخرة من أجل المتانة والمظهر العصري. ارتقي بأي زي مع هذا المنتج الأساسي متعدد الاستخدامات.",
+					title.textContent = "Jackets"
+				}
+				if(title.textContent == "Tshirts"){
+					descriptionParagraph.textContent = "350GSM ثقيل الوزن موضة الرجال هوديس جديد الخريف الشتاء عادية سميكة القطن الرجال قمة بلون هوديس البلوز الذكور",
+					title.textContent = "Tshirts"
+				}
+				if(title.textContent == "Packs"){
+					descriptionParagraph.textContent = "قطعة أساسية في خزانة الملابس، تتميز بلون أسود خالص وأكمام قصيرة. إنه متعدد الاستخدامات، ويتناسب جيدًا مع الجينز لمظهر كاجوال أو سترة لمظهر أكثر أناقة.",
+					title.textContent = "Packs"
+				}
+				if(title.textContent == "Brown Shoes"){
+					descriptionParagraph.textContent = "الأحذية البنية: متعددة الاستخدامات وخالدة. تتناسب النغمات المحايدة بسهولة مع الملابس المختلفة. مثالي لكل من المناسبات غير الرسمية والرسمية.",
+					title.textContent = "Brown Shoes"
+				}
+				if(title.textContent == "Black Turtleneck"){
+					descriptionParagraph.textContent = "الياقة المدورة السوداء: أنيقة، خالدة، بأكمام طويلة. مثالي لأسلوب أنيق ومريح، سواء كان مع الجينز للخروج المريح أو مع طبقة تحت سترة للحصول على مظهر أكثر أناقة.",
+					title.textContent = "Black Turtleneck"
+				}
+				if(title.textContent == "Cap"){
+					descriptionParagraph.textContent = "القبعة : خالدة ومتعددة الاستخدامات ورائعة دون عناء. يضيف لمسة من الأناقة إلى أي زي، سواء كان مع جينز كاجوال أو مع ملابس أكثر رسمية.",
+					title.textContent = "Cap"
+				}
+				if(title.textContent == "Wool Overshirt"){
+					descriptionParagraph.textContent = "قميص علوي من الصوف: دافئ، أنيق، متعدد الاستخدامات. رائع للارتداء فوق تي شيرت أو سترة. مثالي لإضافة المزيد من الدفء والأناقة إلى ملابسك.",
+					title.textContent = "Wool Overshirt"
+				}
+				if(title.textContent == "SweetPants"){
+					descriptionParagraph.textContent = "السراويل الرياضية: قيعان مريحة ومريحة غالبًا باللون الرمادي أو الأسود أو ألوان أخرى. مثالي للاسترخاء أو النزهات غير الرسمية، ويمكن ارتداؤه جيدًا مع التيشيرتات أو السترات ذات القلنسوة للحصول على مظهر مريح.",
+					title.textContent = "SweetPants"
+				}
+				if(title.textContent == "Glasses"){
+					descriptionParagraph.textContent = "النظارات: نظارات عملية وأنيقة. يعزز الرؤية مع إضافة لمسة شخصية إلى أي ملابس.",
+					title.textContent = "Glasses"
+				}
+				if(title.textContent == "Watch"){
+					descriptionParagraph.textContent = "ساعة: إكسسوار لا يتأثر بالزمن، وظيفي وأنيق. تضيف الأناقة إلى أي ملابس، سواء كانت عادية أو رسمية.",
+					title.textContent = "Watch"
+				}
+				if(title.textContent == "AriPods"){
+					descriptionParagraph.textContent = "سماعات AirPods: أنيقة ولاسلكية من شركة آبل. تصميم مدمج واتصال سلس. مثالية للاستماع إلى الموسيقى وإجراء المكالمات والأوامر الصوتية أثناء التنقل.",
+					title.textContent = "AriPods"
+				}
+				if(title.textContent == "Casque"){
+					descriptionParagraph.textContent = "سماعات الرأس: جهاز صغير يُستخدم للاستماع إلى الصوت بشكل فردي دون إزعاج الآخرين. تأتي بتصاميم متنوعة تناسب مختلف الأذواق والاحتياجات، مثل سماعات الأذن الصغيرة أو السماعات الكبيرة التي تغطي الأذن بالكامل. تتوفر بتقنيات متقدمة توفر جودة صوت عالية وتجربة فريدة للاستماع إلى الموسيقى، والتحدث عبر الهاتف، ومشاهدة الأفلام، والألعاب الإلكترونية، وغير ذلك الكثير.",
+					title.textContent = "Casque"
+				}
+                    paragraph.textContent = "لقد قمت للتو بشراء سترة من متجر نجيب للتجارة الإلكترونية، وأنا سعيد للغاية بتجربتي! كان التنقل في الموقع أمرًا سهلاً، وكانت عملية الدفع سلسة، ووصل طلبي في لمح البصر. لقد تجاوزت جودة السترة توقعاتي، وهذا بالضبط ما أردته. بدون أدنى شك، سأعود إلى متجر نجيب للتجارة الإلكترونية لجميع مشترياتي المستقبلية!"
+                    paragraph2.textContent = "لقد اشتريت مؤخرًا حذاءًا من متجر نجيب للتجارة الإلكترونية وأنا سعيد بتجربتي! كان الموقع سهل الاستخدام، وكان الخروج سلسًا، ووصل طلبي على الفور. الأحذية ذات نوعية ممتازة وبالضبط ما كنت أبحث عنه. سأعود بالتأكيد إلى متجر نجيب للتجارة الإلكترونية لتلبية احتياجات التسوق المستقبلية!"
+					wiam.textContent = "وئام علامي";
+					imad.textContent = "عماد منتصر";
+					reviews.textContent = "آراء الزبناء";
+					addtocart.textContent = "أضف إلى السلة";
+					dash.textContent = " لوحة القيادة";
+					welcom.textContent = "مرحبا ";
+					emaill.textContent = " ايميل";
+					Callus.textContent = " تواصل معنا";
+					stoore.textContent = "المتجر";
+					allcategory.textContent = "جميع الفئات";
+					choosecolor.textContent = "اختر اللون";
+					choosesize.textContent = "اختر المقاس";
+					break;
+                default:
+                    break;
+            }
+            localStorage.setItem("selectedLanguage", selectedLanguage);
+        }
+        window.onload = function() {
+            var selectedLanguage = localStorage.getItem("selectedLanguage");
+            if (selectedLanguage) {
+                var languageSelect = document.getElementById("languageSelect");
+                languageSelect.value = selectedLanguage;
+                updateParagraph(); 
+            }
+        };
+    </script>
+
+
+
+
+
+</footer>
